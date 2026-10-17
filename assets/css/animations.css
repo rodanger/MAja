@@ -1,0 +1,385 @@
+/*--------------------------------------------------------------
+# Animations
+# Visual enhancements layered over main.css. Remove this file
+# and assets/js/animations.js to restore the original behavior.
+# Uses the individual transform properties (translate/scale/rotate)
+# where possible so they don't override AOS or Bootstrap transforms.
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Header on scroll
+# No transform/filter here: the mobile navbar is position:fixed
+# inside the header and would break.
+--------------------------------------------------------------*/
+.header {
+  transition: padding 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.header.header-scrolled {
+  position: fixed;
+  padding: 12px 0;
+  background-color: rgba(20, 22, 25, 0.88);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  animation: header-drop 0.45s ease-out;
+}
+
+@keyframes header-drop {
+  from {
+    top: -100px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Desktop nav underline grows from the center
+--------------------------------------------------------------*/
+@media (min-width: 1280px) {
+  .navbar>ul>li>a:before {
+    visibility: visible;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .navbar a:hover:before,
+  .navbar li:hover>a:before,
+  .navbar .active:before {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /*--------------------------------------------------------------
+  # Hero logo: entrance + gentle float
+  --------------------------------------------------------------*/
+  .hero .info img {
+    animation: logo-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) both,
+      logo-float 6s ease-in-out 1.2s infinite;
+  }
+
+  @keyframes logo-in {
+    from {
+      opacity: 0;
+      scale: 0.85;
+      translate: 0 20px;
+    }
+
+    to {
+      opacity: 1;
+      scale: 1;
+      translate: 0 0;
+    }
+  }
+
+  @keyframes logo-float {
+
+    0%,
+    100% {
+      translate: 0 0;
+    }
+
+    50% {
+      translate: 0 -10px;
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # Get Started button: shine sweep + lift and pulse on hover
+  --------------------------------------------------------------*/
+  .hero .info .btn-get-started {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.4s, translate 0.3s ease, box-shadow 0.3s;
+  }
+
+  .hero .info .btn-get-started::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transform: skewX(-20deg);
+    animation: btn-shine 4s ease-in-out 2s infinite;
+    pointer-events: none;
+  }
+
+  @keyframes btn-shine {
+
+    0%,
+    70% {
+      left: -75%;
+    }
+
+    100% {
+      left: 130%;
+    }
+  }
+
+  .hero .info .btn-get-started:hover {
+    translate: 0 -3px;
+    animation: btn-pulse 1.4s ease-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(254, 185, 0, 0.6);
+    }
+
+    100% {
+      box-shadow: 0 0 0 16px rgba(254, 185, 0, 0);
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # Hero carousel: slow Ken Burns zoom on the active slide
+  --------------------------------------------------------------*/
+  .hero .carousel-item.active {
+    animation: ken-burns 7s ease-out both;
+  }
+
+  @keyframes ken-burns {
+    from {
+      scale: 1;
+    }
+
+    to {
+      scale: 1.12;
+    }
+  }
+
+  .hero .carousel-control-prev-icon,
+  .hero .carousel-control-next-icon {
+    transition: background-color 0.3s, color 0.3s, scale 0.3s;
+  }
+
+  .hero .carousel-control-prev:hover .carousel-control-prev-icon,
+  .hero .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--color-primary);
+    color: #fff;
+    scale: 1.1;
+  }
+
+  /*--------------------------------------------------------------
+  # Painting cards: 3D tilt (vars set by animations.js) + image zoom
+  --------------------------------------------------------------*/
+  .constructions .card-item {
+    transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform;
+  }
+
+  .constructions .card-item.is-tilting {
+    transition: transform 0.08s linear, box-shadow 0.4s ease;
+  }
+
+  .constructions .card-item:hover {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .constructions .card-item .card-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .constructions .card-item .card-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    transition: scale 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .constructions .card-item:hover .card-bg::before {
+    scale: 1.08;
+  }
+
+  .constructions .card-item h4 {
+    transition: color 0.3s;
+  }
+
+  .constructions .card-item:hover h4 {
+    color: var(--color-primary);
+  }
+
+  /*--------------------------------------------------------------
+  # Gallery: smoother zoom, sliding overlay, staggered contents
+  --------------------------------------------------------------*/
+  .projects .portfolio-content img {
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .projects .portfolio-content:hover img {
+    transform: scale(1.12) rotate(1deg);
+  }
+
+  .projects .portfolio-content .portfolio-info {
+    translate: 0 30%;
+    transition: opacity 0.4s ease, translate 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .projects .portfolio-content:hover .portfolio-info {
+    translate: 0 0;
+  }
+
+  .projects .portfolio-content .portfolio-info h4,
+  .projects .portfolio-content .portfolio-info .preview-link,
+  .projects .portfolio-content .portfolio-info .details-link {
+    opacity: 0;
+    translate: 0 15px;
+    transition: opacity 0.4s ease, translate 0.4s ease, color 0.3s;
+  }
+
+  .projects .portfolio-content:hover .portfolio-info h4,
+  .projects .portfolio-content:hover .portfolio-info .preview-link,
+  .projects .portfolio-content:hover .portfolio-info .details-link {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .projects .portfolio-content:hover .portfolio-info h4 {
+    transition-delay: 0.1s;
+  }
+
+  .projects .portfolio-content:hover .portfolio-info .preview-link {
+    transition-delay: 0.18s;
+  }
+
+  .projects .portfolio-content:hover .portfolio-info .details-link {
+    transition-delay: 0.26s;
+  }
+
+  .projects .portfolio-content .portfolio-info .preview-link:hover,
+  .projects .portfolio-content .portfolio-info .details-link:hover {
+    scale: 1.2;
+  }
+
+  /* Filters: animated underline + bounce on click */
+  .projects .portfolio-flters li {
+    position: relative;
+    padding-bottom: 6px;
+  }
+
+  .projects .portfolio-flters li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .projects .portfolio-flters li:hover::after,
+  .projects .portfolio-flters li.filter-active::after {
+    transform: scaleX(1);
+  }
+
+  .projects .portfolio-flters li.filter-bounce {
+    animation: filter-bounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes filter-bounce {
+    0% {
+      scale: 1;
+    }
+
+    40% {
+      scale: 1.25;
+    }
+
+    100% {
+      scale: 1;
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # Footer social icons: bounce + spin on hover
+  --------------------------------------------------------------*/
+  .footer .footer-content .social-links a {
+    transition: background-color 0.3s, translate 0.3s;
+  }
+
+  .footer .footer-content .social-links a i {
+    display: inline-block;
+    transition: rotate 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .footer .footer-content .social-links a:hover {
+    animation: social-bounce 0.6s ease;
+  }
+
+  .footer .footer-content .social-links a:hover i {
+    rotate: 360deg;
+  }
+
+  @keyframes social-bounce {
+
+    0%,
+    100% {
+      translate: 0 0;
+    }
+
+    40% {
+      translate: 0 -8px;
+    }
+
+    70% {
+      translate: 0 -3px;
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # Scroll top: arrow nudge on hover
+  --------------------------------------------------------------*/
+  .scroll-top:hover i {
+    animation: arrow-nudge 0.8s ease-in-out infinite;
+  }
+
+  @keyframes arrow-nudge {
+
+    0%,
+    100% {
+      translate: 0 0;
+    }
+
+    50% {
+      translate: 0 -4px;
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # Page transition (class set by animations.js)
+  --------------------------------------------------------------*/
+  body {
+    transition: opacity 0.35s ease;
+  }
+
+  body.page-leaving {
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll top: progress ring (--scroll-progress set by animations.js)
+--------------------------------------------------------------*/
+.scroll-top::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 7px;
+  padding: 3px;
+  background: conic-gradient(var(--color-primary) calc(var(--scroll-progress, 0) * 1turn), rgba(82, 86, 94, 0.25) 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
+}
