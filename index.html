@@ -43,7 +43,7 @@
       font-weight: 400;
       font-style: normal;
       font-size: 19px;
-      
+
     }
 
     /* !important keeps the priority the old #textx id selector had */
@@ -53,12 +53,17 @@
       font-style: normal !important;
       font-size: 16px !important;
       color: black !important;
-      
+
     }
 
+    .mapouter { height: 100%; min-height: 400px; }
+    .gmap_iframe { display: block; width: 100%; height: 100%; min-height: 400px; border: 0; }
+
+    /* Same section title as the other sections (main.css styles .about h2 for the old About page) */
+    .about .section-header h2 { font-size: 32px; font-family: var(--font-primary); max-width: none; margin: 0; }
 
   </style>
-    
+
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-end">
@@ -67,11 +72,11 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -89,7 +94,7 @@
             <p class="textx" data-aos="fade-up">As an artist, I want to draw images showing the revival of our lives, our experiences and our rural customs.</p>
             <br>
             <p class="textx" data-aos="fade-up">My desire is to communicate the natural shadows of our landscapes and the beauty they convey.</p>
-            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
+            <a data-aos="fade-up" data-aos-delay="200" href="#about" class="btn-get-started">Get Started</a>
           </div>
         </div>
       </div>
@@ -117,153 +122,193 @@
 
   <main id="main">
 
-    <!-- ======= Intro Section ======= -->
-    <section id="get-started" class="get-started section-bg">
-      <div class="container">
-
-        <div class="row justify-content-between gy-4">
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
-            <div class="content">
-              <h3 class="" id="">International Artist &amp; Muralist Robert Maja</h3>
-              <p class="textx textx-body">As an artist, I want to draw images showing the revival of our lives, our experiences and our rural customs. My desire is to communicate the natural shadows of our landscapes and the beauty they convey. </p>
-
-              <p class="textx textx-body">Robert Maja was born in Santo Domingo, Dominican Republic in September 1971 . His talent as an artist was quickly recognized in elementary school and strongly encouraged by teachers and elders. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-5" data-aos="fade">
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="post" class="php-email-form">
-              <input type="hidden" name="_subject" value="Robert Maja website: New message from the home page">
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-              <h3>Contact Us</h3>
-              <p class="textx textx-body"></p>
-              <div class="row gy-3">
-
-                <div class="col-md-12">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required>
-                </div>
-
-                <div class="col-md-12 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="phone" placeholder="Phone" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <button type="submit">Send Message</button>
-
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-    </section><!-- End Intro Section -->
-
-    <!-- ======= Paintings Section ======= -->
-    <section id="constructions" class="constructions">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Paintings</h2>
-          <p class="textx"></p>
+          <h2>About</h2>
         </div>
 
-        <div class="row gy-4">
+        <div class="row position-relative">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/img/39.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Cubism</h4>
-                    <p class="textx textx-body">Cubism was an influential art movement pioneered by Pablo Picasso and Georges Braque in the early 20th century. It revolutionized traditional perspectives by breaking down subjects into geometric shapes and depicting them from multiple viewpoints simultaneously. </p>
-                  </div>
-                </div>
+          <div class="col-lg-7 about-img" style="background-image: url(assets/img/img/maja2.png);"></div>
+
+          <div class="col-lg-7">
+            <div class="our-story">
+              <h4>International Artist &amp; Muralist</h4>
+              <h3>Our Story</h3>
+              <p class="textx textx-body">Robert Maja's journey as a visual artist and muralist began in the vibrant city of Santo Domingo, Dominican Republic, where he was born in September 1971. From an early age, his artistic prowess was evident, garnering recognition and praise from teachers and elders during his elementary school years.</p>
+              <p class="textx textx-body">
+                Encouraged by this support, Robert's passion for art flourished,
+                leading him to immerse himself further in the world of creativity.
+                An essential chapter in Robert's artistic development
+                unfolded as he found himself surrounded
+                by older university art students who became his mentors.
+              </p>
+              <div class="watch-video d-flex align-items-center position-relative">
+                <i class="bi bi-play-circle"></i>
+                <a href="https://www.youtube.com/watch?v=DQDI_xGP414" class="glightbox stretched-link">Watch Video</a>
               </div>
             </div>
-          </div><!-- End Painting Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/img/purvit.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Cigars</h4>
-                    <p class="textx textx-body">Tobacco, specifically in the context of cigars or "puros,"
-                      has a rich history and culture. Cigars are typically hand-rolled
-                      bundles of dried and fermented tobacco leaves,
-                      often associated with luxury and relaxation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Painting Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/img/38.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Rooster</h4>
-                    <p class="textx textx-body">Through his masterful strokes,
-                      Maja imbues these majestic birds with a sense of vibrancy and dynamism
-                      their feathers depicted in a riot of colors and textures that seem to dance across the canvas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Painting Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/img/lands1.png);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Landscape</h4>
-                    <p class="textx textx-body">
-                      Landscapes have been a prominent subject in art for centuries,
-                      with artists capturing the beauty and essence of natural scenery.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Painting Card -->
+          </div>
 
         </div>
 
       </div>
-    </section><!-- End Paintings Section -->
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Services</h2>
+          <p class="textx textx-body">Embark on a distinctive artistic journey with Robert's tailored services. Each artwork is meticulously crafted to reflect your unique style.</p>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <svg class="ico ico-draws" viewBox="0 0 64 64" aria-hidden="true">
+                  <path class="draw" pathLength="1" d="M40 8l14 14L24 52H10V38z"/>
+                  <path class="draw" pathLength="1" d="M33 15l14 14"/>
+                  <path class="accent ico-scribble" pathLength="1" d="M8 60c6-4 10 2 16-1s9-3 14 0 8 1 12-2"/>
+                </svg>
+              </div>
+              <h3>Draws</h3>
+              <p class="textx textx-body">Expressive drawings and sketches that capture people, places and everyday moments with a fine, confident line.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <svg class="ico ico-murals" viewBox="0 0 64 64" aria-hidden="true">
+                  <g class="ico-roll">
+                    <rect class="draw" pathLength="1" x="8" y="6" width="38" height="14" rx="3"/>
+                    <path class="draw" pathLength="1" d="M46 13h6v14H28v8"/>
+                    <rect class="draw" pathLength="1" x="24" y="35" width="8" height="21" rx="2"/>
+                  </g>
+                  <path class="accent ico-drip" d="M14 26v6"/>
+                </svg>
+              </div>
+              <h3>Murals</h3>
+              <p class="textx textx-body">Large-scale murals for homes, businesses and public spaces, turning a plain wall into a lasting work of art.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <svg class="ico ico-painting" viewBox="0 0 64 64" aria-hidden="true">
+                  <path class="draw" pathLength="1" d="M54 6L34 26"/>
+                  <path class="draw" pathLength="1" d="M29 25l10 10"/>
+                  <path class="draw" pathLength="1" d="M28 30c-5 0-9 3-10 9-.6 4-2.5 7-6 9 8 2.5 17 1 21-4 3-3.5 3.5-6.5 3-8z"/>
+                  <path class="accent-fill ico-drip" d="M14 54c0-2 2-4.5 2-4.5s2 2.5 2 4.5a2 2 0 0 1-4 0z"/>
+                </svg>
+              </div>
+              <h3>General Painting</h3>
+              <p class="textx textx-body">Original paintings of landscapes, roosters, cigars and cubist compositions, the themes that define Robert's work.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <svg class="ico ico-custom" viewBox="0 0 64 64" aria-hidden="true">
+                  <rect class="draw" pathLength="1" x="6" y="12" width="42" height="44" rx="2"/>
+                  <rect class="draw" pathLength="1" x="13" y="19" width="28" height="30"/>
+                  <path class="draw" pathLength="1" d="M13 43l9-10 6 6 4-4 9 8"/>
+                  <path class="accent ico-spark" d="M54 4v12M48 10h12"/>
+                </svg>
+              </div>
+              <h3>Custom Art</h3>
+              <p class="textx textx-body">Custom commissions created around your idea, your space and your style, from the first sketch to the finished piece.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <svg class="ico ico-consult" viewBox="0 0 64 64" aria-hidden="true">
+                  <path class="draw" pathLength="1" d="M8 12h48v30H30L18 52V42H8z"/>
+                  <circle class="accent-fill ico-dot" cx="21" cy="27" r="3"/>
+                  <circle class="accent-fill ico-dot" cx="32" cy="27" r="3"/>
+                  <circle class="accent-fill ico-dot" cx="43" cy="27" r="3"/>
+                </svg>
+              </div>
+              <h3>Art Consultation</h3>
+              <p class="textx textx-body">Personalized consultation plus installation and exhibition advisory to help you choose, place and present art.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Artist Story Section ======= -->
+    <section class="alt-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg" style="background-image: url(assets/img/img/rmaja9.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>Breaking New Ground: The Artistry of Robert</h3>
+            <p class="textx textx-body">Robert's art redefines boundaries, blending innovation with meticulous detail and fresh perspectives.</p>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <span class="icon-svg">
+                <svg class="ico ico-vision" viewBox="0 0 64 64" aria-hidden="true">
+                  <path class="draw" pathLength="1" d="M24 44c0-6-8-9-8-19a16 16 0 0 1 32 0c0 10-8 13-8 19z"/>
+                  <path class="draw" pathLength="1" d="M25 50h14M27 56h10"/>
+                  <path class="accent ico-rays" d="M32 0v3M6 25H3M61 25h-3M12 6l2 2M52 6l-2 2"/>
+                </svg>
+              </span>
+              <div>
+                <h4>Innovative Vision</h4>
+                <p class="textx textx-body">With a keen eye for detail and a unique perspective, Robert infuses his artworks with originality and creativity.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <span class="icon-svg">
+                <svg class="ico ico-passion" viewBox="0 0 64 64" aria-hidden="true">
+                  <path class="draw ico-beat" pathLength="1" d="M32 54S8 40 8 23a12 12 0 0 1 24-4 12 12 0 0 1 24 4c0 17-24 31-24 31z"/>
+                </svg>
+              </span>
+              <div>
+                <h4>Unwavering Passion for Art</h4>
+                <p class="textx textx-body">Robert's dedication to his craft is fueled by an unwavering passion for art. Whether he's painting a landscape or experimenting with new techniques.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <span class="icon-svg">
+                <svg class="ico ico-landscape" viewBox="0 0 64 64" aria-hidden="true">
+                  <path class="draw" pathLength="1" d="M4 54l18-24 10 13 8-9 20 20z"/>
+                  <circle class="accent" cx="46" cy="16" r="6"/>
+                  <path class="accent ico-sun-rays" d="M46 3v3M46 26v3M33 16h3M56 16h3M37 7l2 2M53 23l2 2M37 25l2-2M53 9l2-2"/>
+                </svg>
+              </span>
+              <div>
+                <h4>Masterful Landscape Interpretation</h4>
+                <p class="textx textx-body">Robert's skill as a paisajista (landscape artist) is evident in his ability to capture the essence of nature with breathtaking accuracy.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Artist Story Section -->
 
     <!-- ======= Gallery Section ======= -->
-    <section id="projects" class="projects">
+    <section id="gallery" class="projects">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -279,17 +324,18 @@
             <li class="textx-body" data-filter=".filter-smoking">Cigars</li>
             <li class="textx-body" data-filter=".filter-murals">Murals</li>
             <li class="textx-body" data-filter=".filter-landscape">Landscape</li>
+            <li class="textx-body" data-filter=".filter-cubism">Cubism</li>
           </ul><!-- End Gallery Filters -->
 
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/50.jpg" class="img-fluid" alt="Cubism by Robert Maja">
+                <img src="assets/img/img/43.jpg" width="1200" height="909" loading="lazy" decoding="async" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
-                  <h4>Cubism</h4>
+                  <h4>Rooster</h4>
                   <p></p>
-                  <a href="assets/img/img/50.jpg" title="Cubism" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/43.jpg" title="Rooster" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -297,11 +343,35 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/51.jpg" class="img-fluid" alt="Landscape by Robert Maja">
+                <img src="assets/img/img/52.jpg" width="1200" height="901" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
-                  <a href="assets/img/img/51.jpg" title="Landscape" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/52.jpg" title="Landscape" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/39.jpg" width="748" height="1000" loading="lazy" decoding="async" class="img-fluid" alt="Cubism by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cubism</h4>
+                  <p></p>
+                  <a href="assets/img/img/39.jpg" title="Cubism" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/50.jpg" width="1200" height="897" loading="lazy" decoding="async" class="img-fluid" alt="Cubism by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cubism</h4>
+                  <p></p>
+                  <a href="assets/img/img/50.jpg" title="Cubism" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -309,11 +379,35 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/sam.JPG" class="img-fluid" alt="Cigars by Robert Maja">
+                <img src="assets/img/img/sam.JPG" width="1920" height="1080" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
-                  <a href="assets/img/img/sam.JPG" title="Cigars" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/sam.JPG" title="Cigars" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/66.jpeg" width="1024" height="768" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/66.jpeg" title="Cigars" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/purvit.jpg" width="1339" height="1800" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/purvit.jpg" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -321,11 +415,35 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/43.jpg" class="img-fluid" alt="Rooster by Robert Maja">
+                <img src="assets/img/img/37.jpg" width="1200" height="961" loading="lazy" decoding="async" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Rooster</h4>
                   <p></p>
-                  <a href="assets/img/img/43.jpg" title="Rooster" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/37.jpg" title="Rooster" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/53.jpg" width="798" height="1000" loading="lazy" decoding="async" class="img-fluid" alt="Cubism by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cubism</h4>
+                  <p></p>
+                  <a href="assets/img/img/53.jpg" title="Cubism" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/51.jpg" width="1200" height="954" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/51.jpg" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -333,7 +451,175 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/63.JPG" class="img-fluid" alt="Cigars by Robert Maja">
+                <img src="assets/img/img/59.jpg" width="576" height="720" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/59.jpg" title="Cigars" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/22.jpg" width="1200" height="390" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Murals</h4>
+                  <p></p>
+                  <a href="assets/img/img/22.jpg" title="Murals" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/68.jpg" width="1024" height="683" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Murals</h4>
+                  <p></p>
+                  <a href="assets/img/img/68.jpg" title="Murals" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/13.jpg" width="956" height="1200" loading="lazy" decoding="async" class="img-fluid" alt="Rooster by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Rooster</h4>
+                  <p></p>
+                  <a href="assets/img/img/13.jpg" title="Rooster" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/64.jpg" width="686" height="843" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Murals</h4>
+                  <p></p>
+                  <a href="assets/img/img/64.jpg" title="Murals" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/65.jpeg" width="1024" height="927" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/65.jpeg" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/24.jpg" width="1200" height="800" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Murals</h4>
+                  <p></p>
+                  <a href="assets/img/img/24.jpg" title="Murals" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/17.jpg" width="1200" height="800" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Murals</h4>
+                  <p></p>
+                  <a href="assets/img/img/17.jpg" title="Murals" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/25.jpg" width="1200" height="856" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Murals</h4>
+                  <p></p>
+                  <a href="assets/img/img/25.jpg" title="Murals" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/3.jpg" width="1200" height="799" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/3.jpg" title="Landscape" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/6.jpg" width="1200" height="595" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/6.jpg" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/31.jpg" width="752" height="1000" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/31.jpg" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/5.jpg" width="959" height="1200" loading="lazy" decoding="async" class="img-fluid" alt="Rooster by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Rooster</h4>
+                  <p></p>
+                  <a href="assets/img/img/5.jpg" title="Rooster" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/21.jpg" width="1200" height="800" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Murals</h4>
+                  <p></p>
+                  <a href="assets/img/img/21.jpg" title="Murals" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/63.JPG" width="1771" height="1061" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -343,13 +629,61 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/68.jpg" class="img-fluid" alt="Murals by Robert Maja">
+                <img src="assets/img/img/57.JPG" width="891" height="1200" loading="lazy" decoding="async" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
-                  <h4>Murals</h4>
+                  <h4>Rooster</h4>
                   <p></p>
-                  <a href="assets/img/img/68.jpg" title="Murals" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/57.JPG" title="Rooster" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/44.jpg" width="1200" height="894" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/44.jpg" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/42.jpg" width="662" height="1000" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/42.jpg" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/35.jpg" width="1200" height="957" loading="lazy" decoding="async" class="img-fluid" alt="Rooster by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Rooster</h4>
+                  <p></p>
+                  <a href="assets/img/img/35.jpg" title="Rooster" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/45.jpg" width="1200" height="893" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/45.jpg" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -357,11 +691,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/67.jpg" class="img-fluid" alt="Murals by Robert Maja">
+                <img src="assets/img/img/23.jpg" width="1200" height="332" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
-                  <a href="assets/img/img/67.jpg" title="Murals" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/23.jpg" title="Murals" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -369,19 +703,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/22.jpg" class="img-fluid" alt="Murals by Robert Maja">
-                <div class="portfolio-info">
-                  <h4>Murals</h4>
-                  <p></p>
-                  <a href="assets/img/img/22.jpg" title="Murals" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/img/18.jpg" class="img-fluid" alt="Murals by Robert Maja">
+                <img src="assets/img/img/18.jpg" width="1200" height="341" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -391,13 +713,109 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/21.jpg" class="img-fluid" alt="Murals by Robert Maja">
+                <img src="assets/img/img/poet.jpg" width="1720" height="2524" loading="lazy" decoding="async" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
-                  <h4>Murals</h4>
+                  <h4>Cubism</h4>
                   <p></p>
-                  <a href="assets/img/img/21.jpg" title="Murals" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/poet.jpg" title="Cubism" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/40.jpg" width="742" height="1000" loading="lazy" decoding="async" class="img-fluid" alt="Cubism by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cubism</h4>
+                  <p></p>
+                  <a href="assets/img/img/40.jpg" title="Cubism" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/4.jpg" width="897" height="1200" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/4.jpg" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/47.jpg" width="1200" height="956" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/47.jpg" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/12.jpg" width="1200" height="952" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/12.jpg" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/14.jpg" width="1200" height="1199" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/14.jpg" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/46.jpg" width="1200" height="902" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/46.jpg" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/58.jpg" width="1800" height="1371" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/58.jpg" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/32.jpg" width="745" height="1000" loading="lazy" decoding="async" class="img-fluid" alt="Cubism by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cubism</h4>
+                  <p></p>
+                  <a href="assets/img/img/32.jpg" title="Cubism" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -405,11 +823,83 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/20.jpg" class="img-fluid" alt="Murals by Robert Maja">
+                <img src="assets/img/img/62.jpg" width="1200" height="342" loading="lazy" decoding="async" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
-                  <a href="assets/img/img/20.jpg" title="Murals" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/62.jpg" title="Murals" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/lands1.png" width="1054" height="1324" loading="lazy" decoding="async" class="img-fluid" alt="Landscape by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Landscape</h4>
+                  <p></p>
+                  <a href="assets/img/img/lands1.png" title="Landscape" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->       
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/DR-Market.JPG" width="1000" height="731" loading="lazy" decoding="async" class="img-fluid" alt="Market by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Market</h4>
+                  <p></p>
+                  <a href="assets/img/img/DR-Market.JPG" title="Market" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/gallery.jpg" width="1080" height="1080" loading="lazy" decoding="async" class="img-fluid" alt="Gallery by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Gallery</h4>
+                  <p></p>
+                  <a href="assets/img/img/gallery.jpg" title="Gallery" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/gallery2.jpg" width="551" height="551" loading="lazy" decoding="async" class="img-fluid" alt="Gallery by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Gallery</h4>
+                  <p></p>
+                  <a href="assets/img/img/gallery2.jpg" title="Gallery" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/Puro-chulo.JPG" width="1237" height="984" loading="lazy" decoding="async" class="img-fluid" alt="Cigars by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cigars</h4>
+                  <p></p>
+                  <a href="assets/img/img/Puro-chulo.JPG" title="Cigars" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/img/54.jpg" width="794" height="1000" loading="lazy" decoding="async" class="img-fluid" alt="Cubism by Robert Maja">
+                <div class="portfolio-info">
+                  <h4>Cubism</h4>
+                  <p></p>
+                  <a href="assets/img/img/54.jpg" title="Cubism" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -421,6 +911,81 @@
 
       </div>
     </section><!-- End Gallery Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-map"></i>
+              <h3>Our Address</h3>
+              <p>Los Angeles California</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>robertmaja71@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>1 (805) 540-4434</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+
+          <div class="col-lg-6">
+            <div class="mapouter">
+              <iframe class="gmap_iframe" title="Map of Los Angeles, California" loading="lazy" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Los Angeles california&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+          </div><!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="post" role="form" class="php-email-form">
+              <input type="hidden" name="_subject" value="Robert Maja website: New message">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <div class="row gy-4">
+                <div class="col-lg-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
@@ -436,11 +1001,11 @@
               <h1>
                 <img src="/assets/img/img/logo.png" height="45%" width="50%" alt="Robert Maja International Fine Art" class="src">
                 <span></span>
-              
+
               </h1>
               <p>
                 Los Angeles California <br>
-                
+
                 <strong>Phone:</strong> +1 (805) 540-4434<br>
                 <strong>Email:</strong> robertmaja71@gmail.com<br>
               </p>
@@ -453,19 +1018,20 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/about.html">About us</a></li>
-              <li><a href="/services.html">Services</a></li>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!-- End footer links column-->
 
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><a href="#">Murals</a></li>
-              <li><a href="#">Custom Art</a></li>
-              <li><a href="#">General Painting</a></li>
-              <li><a href="#">Draws</a></li>
+              <li><a href="#services">Murals</a></li>
+              <li><a href="#services">Custom Art</a></li>
+              <li><a href="#services">General Painting</a></li>
+              <li><a href="#services">Draws</a></li>
             </ul>
           </div><!-- End footer links column-->
 
@@ -479,7 +1045,7 @@
           &copy; Copyright <strong><span>Robertmaja</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          
+
           Designed by <a href="https://www.instagram.com/roddev_/">RdeV</a>
         </div>
       </div>

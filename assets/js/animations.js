@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const header = document.querySelector('#header');
   const scrollTop = document.querySelector('.scroll-top');
+  const sectionLinks = Array.from(document.querySelectorAll('#navbar a[href^="#"]'))
+    .filter(link => link.hash.length > 1 && document.querySelector(link.hash));
   let ticking = false;
 
   function onScroll() {
@@ -19,12 +21,58 @@ document.addEventListener('DOMContentLoaded', () => {
     if (header) {
       header.classList.toggle('header-scrolled', y > 100);
     }
+    const max = document.documentElement.scrollHeight - window.innerHeight;
     if (scrollTop) {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? Math.min(y / max, 1) : 0;
       scrollTop.style.setProperty('--scroll-progress', progress.toFixed(3));
     }
+    updateActiveLink(y, max);
     ticking = false;
+  }
+
+  /**
+   * Highlight the menu link of the section in view (single page navigation)
+   */
+  function updateActiveLink(y, max) {
+    if (!sectionLinks.length) return;
+    let current = sectionLinks[0];
+    if (y >= max - 2) {
+      current = sectionLinks[sectionLinks.length - 1];
+    } else {
+      sectionLinks.forEach(link => {
+        const top = document.querySelector(link.hash).getBoundingClientRect().top;
+        if (top <= window.innerHeight * 0.35) current = link;
+      });
+    }
+    sectionLinks.forEach(link => link.classList.toggle('active', link === current));
+  }
+
+  /**
+   * Arriving with a section in the URL (e.g. /#gallery from the old page
+   * redirects): jump again once the page has finished its layout
+   */
+  window.addEventListener('load', () => {
+    const target = window.location.hash.length > 1 && document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (target) {
+      window.requestAnimationFrame(() => target.scrollIntoView({ behavior: 'instant' }));
+    }
+  });
+
+  /**
+   * Gallery images load lazily: re-run the masonry layout as they arrive
+   */
+  const portfolioContainer = document.querySelector('.portfolio-container');
+  if (portfolioContainer) {
+    let layoutQueued = false;
+    portfolioContainer.addEventListener('load', (event) => {
+      if (event.target.tagName !== 'IMG' || layoutQueued || typeof Isotope === 'undefined') return;
+      layoutQueued = true;
+      window.requestAnimationFrame(() => {
+        layoutQueued = false;
+        const iso = Isotope.data(portfolioContainer);
+        if (iso) iso.layout();
+      });
+    }, true);
   }
 
   document.addEventListener('scroll', () => {
@@ -37,6 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
 
   if (reduceMotion) return;
+
+  /**
+   * Line icons draw their strokes the first time they scroll into view
+   */
+  const icons = document.querySelectorAll('.ico');
+  if (icons.length && 'IntersectionObserver' in window) {
+    const iconObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('is-pending');
+          iconObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    icons.forEach(icon => {
+      icon.classList.add('is-pending');
+      iconObserver.observe(icon);
+    });
+  }
 
   /**
    * 3D tilt on painting cards (desktop pointers only)

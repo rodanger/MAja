@@ -357,6 +357,192 @@
   }
 
   /*--------------------------------------------------------------
+  # Line icons: stroke draws in when visible (is-pending removed
+  # by animations.js), then each icon keeps a small looping motion
+  --------------------------------------------------------------*/
+  .services .service-item:hover {
+    translate: 0 -8px;
+  }
+
+  .ico .draw {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1.4s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .ico .draw:nth-child(2) {
+    transition-delay: 0.25s;
+  }
+
+  .ico .draw:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+
+  .ico.is-pending .draw {
+    stroke-dashoffset: 1;
+  }
+
+  .ico.is-pending .accent,
+  .ico.is-pending .accent-fill {
+    opacity: 0;
+  }
+
+  .ico .accent,
+  .ico .accent-fill {
+    transition: opacity 0.6s ease 1s;
+  }
+
+  /* Draws: the pencil keeps scribbling its line */
+  .ico-draws .ico-scribble {
+    stroke-dasharray: 1 1;
+    animation: ico-scribble 3.2s ease-in-out 1.4s infinite;
+  }
+
+  @keyframes ico-scribble {
+    from {
+      stroke-dashoffset: 1;
+    }
+
+    to {
+      stroke-dashoffset: -1;
+    }
+  }
+
+  /* Murals: the roller goes up and down the wall */
+  .ico-murals .ico-roll {
+    animation: ico-roll 2.4s ease-in-out 1.4s infinite;
+  }
+
+  @keyframes ico-roll {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Murals and General Painting: a drop of paint falls */
+  .ico .ico-drip {
+    animation: ico-drip 2.2s ease-in 1.6s infinite;
+  }
+
+  @keyframes ico-drip {
+    0% {
+      transform: translateY(-6px);
+      opacity: 0;
+    }
+
+    25%,
+    70% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(8px);
+      opacity: 0;
+    }
+  }
+
+  /* Custom Art: the sparkle twinkles */
+  .ico-custom .ico-spark {
+    animation: ico-spark 2.6s ease-in-out 1.4s infinite;
+  }
+
+  @keyframes ico-spark {
+
+    0%,
+    100% {
+      transform: scale(0.6) rotate(0deg);
+      opacity: 0.5;
+    }
+
+    50% {
+      transform: scale(1.15) rotate(90deg);
+      opacity: 1;
+    }
+  }
+
+  /* Art Consultation: typing dots */
+  .ico-consult .ico-dot {
+    animation: ico-dot 1.4s ease-in-out 1.4s infinite;
+  }
+
+  .ico-consult .ico-dot:nth-of-type(2) {
+    animation-delay: 1.55s;
+  }
+
+  .ico-consult .ico-dot:nth-of-type(3) {
+    animation-delay: 1.7s;
+  }
+
+  @keyframes ico-dot {
+
+    0%,
+    60%,
+    100% {
+      transform: translateY(0);
+    }
+
+    30% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Innovative Vision: the bulb glows */
+  .ico-vision .ico-rays {
+    animation: ico-glow 2s ease-in-out 1.4s infinite;
+  }
+
+  @keyframes ico-glow {
+
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  /* Passion: heartbeat */
+  .ico-passion .ico-beat {
+    animation: ico-beat 1.6s ease-in-out 1.4s infinite;
+  }
+
+  @keyframes ico-beat {
+
+    0%,
+    40%,
+    100% {
+      transform: scale(1);
+    }
+
+    15% {
+      transform: scale(1.12);
+    }
+
+    28% {
+      transform: scale(1.04);
+    }
+  }
+
+  /* Landscape: the sun rays turn slowly */
+  .ico-landscape .ico-sun-rays {
+    animation: ico-spin 12s linear infinite;
+  }
+
+  @keyframes ico-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*--------------------------------------------------------------
   # Page transition (class set by animations.js)
   --------------------------------------------------------------*/
   body {
@@ -366,6 +552,84 @@
   body.page-leaving {
     opacity: 0;
   }
+}
+
+/*--------------------------------------------------------------
+# Line icons (inline SVG) for Services and the Artist Story boxes
+--------------------------------------------------------------*/
+.ico {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ico * {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.ico .accent {
+  stroke: var(--ico-accent, var(--color-primary));
+}
+
+.ico .accent-fill {
+  fill: var(--ico-accent, var(--color-primary));
+  stroke: none;
+}
+
+.services .service-item {
+  border-radius: 6px;
+  transition: translate 0.4s ease, box-shadow 0.4s ease;
+}
+
+.services .service-item:hover {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.services .service-item .icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 36px;
+}
+
+.services .service-item .icon svg {
+  position: relative;
+  z-index: 2;
+  color: var(--color-secondary);
+  transition: scale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), rotate 0.4s ease;
+}
+
+.services .service-item:hover .icon svg {
+  scale: 1.12;
+  rotate: -6deg;
+}
+
+.alt-services .icon-box .icon-svg {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  margin-right: 25px;
+  border-radius: 4px;
+  color: var(--color-primary);
+  background-color: #fff;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.alt-services .icon-box:hover .icon-svg {
+  --ico-accent: #fff;
+  color: #fff;
+  background-color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------

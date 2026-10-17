@@ -1,0 +1,17 @@
+{
+  "redirects": [
+    { "source": "/about", "destination": "/#about", "permanent": true },
+    { "source": "/about.html", "destination": "/#about", "permanent": true },
+    { "source": "/services", "destination": "/#services", "permanent": true },
+    { "source": "/services.html", "destination": "/#services", "permanent": true },
+    { "source": "/service-details.html", "destination": "/#services", "permanent": true },
+    { "source": "/projects", "destination": "/#gallery", "permanent": true },
+    { "source": "/projects.html", "destination": "/#gallery", "permanent": true },
+    { "source": "/project-details.html", "destination": "/#gallery", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/contact.html", "destination": "/#contact", "permanent": true },
+    { "source": "/blog.html", "destination": "/", "permanent": true },
+    { "source": "/blog-details.html", "destination": "/", "permanent": true },
+    { "source": "/sample-inner-page.html", "destination": "/", "permanent": true }
+  ]
+}
