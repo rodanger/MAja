@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Services</title>
-  <meta content="" name="description">
+  <title>Services | Robert Maja</title>
+  <meta content="Murals, custom art, painting, drawing and art consultation by artist Robert Maja." name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
@@ -30,18 +30,12 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/animations.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: UpConstruction
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
      .textx{
       font-family: "Varela Round", sans-serif;
@@ -51,12 +45,13 @@
       
     }
 
-    #textx{
-      font-family: "Varela Round", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 16px;
-      color: black;
+    /* !important keeps the priority the old #textx id selector had */
+    .textx-body{
+      font-family: "Varela Round", sans-serif !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      font-size: 16px !important;
+      color: black !important;
       
     }
     
@@ -67,10 +62,9 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        
         <h1>
-                      <img src="/assets/img/img/logo.png" height="125em" width="125em" alt="" class="src">
+                      <img src="/assets/img/img/logo.png" height="125em" width="125em" alt="Robert Maja International Fine Art" class="src">
         
         </h1>
       </a>
@@ -85,7 +79,7 @@
           <li><a href="projects.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav><!-- .navbar -->
+      </nav>
 
     </div>
   </header><!-- End Header -->
@@ -105,7 +99,7 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Service Details Section ======= -->
+    <!-- ======= Services Section ======= -->
     <section id="service-details" class="service-details">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -120,28 +114,25 @@
               <a href="#">Art Consultation</a>
             </div>
 
-            
           </div>
 
           <div class="col-lg-8">
-            <img src="assets/img/img/rmaja1.jpg" alt="" class="img-fluid services-img">
+            <img src="assets/img/img/rmaja1.jpg" alt="Robert Maja Gallery book" class="img-fluid services-img">
             <h3>Robert's Artistic Services: Elevating Your Space to New Heights</h3>
-            <p id="textx" class="textx">
+            <p class="textx textx-body">
              Embark on a distinctive artistic journey with Robert's tailored services. 
              From personalized consultations to custom creations,
              Robert offers a comprehensive suite of services designed to enhance your artistic vision.
              With meticulous attention to detail and an unwavering dedication to excellence,
              each artwork is meticulously crafted to reflect your unique style.
             
-
-
             </p>
             <ul>
               <li><i class="bi bi-check-circle"></i> <span>Personalized Consultation.</span></li>
               <li><i class="bi bi-check-circle"></i> <span>Custom Commissions.</span></li>
               <li><i class="bi bi-check-circle"></i> <span>Installation and Exhibition Advisory</span></li>
             </ul>
-            <p id="textx" class="textx">
+            <p class="textx textx-body">
              Immerse yourself in a world of creativity and refinement with Robert's thoughtfully curated
              collections and expert guidance.
              Whether you're seeking to enrich your environment or seeking inspiration,
@@ -153,7 +144,7 @@
         </div>
 
       </div>
-    </section><!-- End Service Details Section -->
+    </section><!-- End Services Section -->
 
   </main><!-- End #main -->
 
@@ -167,22 +158,18 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h1>
-                <img src="/assets/img/img/logo.png" height="45%" width="50%" alt="" class="src">
+                <img src="/assets/img/img/logo.png" height="45%" width="50%" alt="Robert Maja International Fine Art" class="src">
               </h1>
              
               <p>
                 Los Angeles California <br>
-                <!--NY 535022, USA<br><br>-->
+                
                 <strong>Phone:</strong> +1 (805) 540-4434<br>
                  <strong>Email:</strong> robertmaja71@gmail.com<br>
               </p>
 
-
               <div class="social-links d-flex mt-3">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/robertmajaofficial/" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div><!-- End footer info column-->
@@ -193,8 +180,6 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="/about.html">About us</a></li>
               <li><a href="/services.html">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
             </ul>
           </div><!-- End footer links column-->
 
@@ -208,8 +193,6 @@
             </ul>
           </div><!-- End footer links column-->
 
-         
-
         </div>
       </div>
     </div>
@@ -220,10 +203,7 @@
           &copy; Copyright <strong><span>Robertmaja</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          
           Designed by <a href="https://www.instagram.com/roddev_/">RdeV</a>
         </div>
       </div>

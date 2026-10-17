@@ -50,25 +50,21 @@
   });
 
   function php_email_form_submit(thisForm, action, formData) {
+    // Formspree answers with JSON: { ok: true } or { errors: [{ message }] }
     fetch(action, {
       method: 'POST',
       body: formData,
-      headers: {'X-Requested-With': 'XMLHttpRequest'}
+      headers: {'Accept': 'application/json'}
     })
-    .then(response => {
-      if( response.ok ) {
-        return response.text();
-      } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
-      }
-    })
-    .then(data => {
+    .then(response => response.json().catch(() => ({})).then(data => ({ response, data })))
+    .then(({ response, data }) => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      if (response.ok && data.ok !== false) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
+        thisForm.reset();
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        const message = data.errors ? data.errors.map(e => e.message).join(', ') : `${response.status} ${response.statusText}`;
+        throw new Error('Sorry, your message could not be sent: ' + message);
       }
     })
     .catch((error) => {
@@ -78,7 +74,7 @@
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
+    thisForm.querySelector('.error-message').textContent = error.message || error;
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
 

@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact</title>
-  <meta content="" name="description">
+  <title>Contact | Robert Maja</title>
+  <meta content="Contact Robert Maja for murals, commissions and art inquiries in Los Angeles, California." name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
@@ -30,13 +30,11 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/animations.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: UpConstruction
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .mapouter { height: 100%; min-height: 400px; }
+    .gmap_iframe { display: block; width: 100%; height: 100%; min-height: 400px; border: 0; }
+  </style>
+
 </head>
 
 <body>
@@ -46,10 +44,9 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        
         <h1>
-         <img src="/assets/img/img/logo.png" height="125em" width="125em" alt="" class="src">
+         <img src="/assets/img/img/logo.png" height="125em" width="125em" alt="Robert Maja International Fine Art" class="src">
         
         </h1>
       </a>
@@ -64,7 +61,7 @@
           <li><a href="projects.html">Gallery</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
-      </nav><!-- .navbar -->
+      </nav>
 
     </div>
   </header><!-- End Header -->
@@ -117,21 +114,16 @@
 
         <div class="row gy-4 mt-1">
 
+          <div class="col-lg-6">
             <div class="mapouter">
-              <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Los Angeles california&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://strandsgame.net/">Strands</a></div>
-              <style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style></div>
-
-          <!--
-
-            
-          <div class="col-lg-6 ">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+              <iframe class="gmap_iframe" title="Map of Los Angeles, California" loading="lazy" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Los Angeles california&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
           </div><!-- End Google Maps -->
 
-          
-
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="post" role="form" class="php-email-form">
+              <input type="hidden" name="_subject" value="Robert Maja website: New message from the contact page">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
               <div class="row gy-4">
                 <div class="col-lg-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -172,22 +164,18 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h1>
-                 <img src="/assets/img/img/logo.png" height="45%" width="50%" alt="" class="src">
+                 <img src="/assets/img/img/logo.png" height="45%" width="50%" alt="Robert Maja International Fine Art" class="src">
                 <span></span>
               
-             
               <p>
                 Los Angeles California <br>
-                <!--NY 535022, USA<br><br>-->
+                
                 <strong>Phone:</strong> +1 (805) 540-4434<br>
                  <strong>Email:</strong> robertmaja71@gmail.com<br>
               </p>
 
               <div class="social-links d-flex mt-3">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/robertmajaofficial/" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div><!-- End footer info column-->
@@ -198,8 +186,6 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="/about.html">About us</a></li>
               <li><a href="/services.html">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
             </ul>
           </div><!-- End footer links column-->
 
@@ -213,8 +199,6 @@
             </ul>
           </div><!-- End footer links column-->
 
-         
-
         </div>
       </div>
     </div>
@@ -225,10 +209,7 @@
           &copy; Copyright <strong><span>Robertmaja</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          
           Designed by <a href="https://www.instagram.com/roddev_/">RdeV</a>
         </div>
       </div>

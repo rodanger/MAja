@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Gallery</title>
-  <meta content="" name="description">
+  <title>Gallery | Robert Maja</title>
+  <meta content="Gallery of paintings and murals by Robert Maja: roosters, cigars, landscapes, cubism and more." name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
@@ -30,31 +30,21 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/animations.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: UpConstruction
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
   <style>
 
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
     
-    @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oxygen&family=Voces&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Just+Me+Again+Down+Here&family=Kumbh+Sans:wght@100..900&family=Varela+Round&display=swap');
-    
-    #textx{
-      font-family: "Varela Round", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 16px;
-      color: black;
+    /* !important keeps the priority the old #textx id selector had */
+    .textx-body{
+      font-family: "Varela Round", sans-serif !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      font-size: 16px !important;
+      color: black !important;
       
     }
 
@@ -65,13 +55,11 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        
         <h1>
 
-          <img src="/assets/img/img/logo.png" height="125em" width="125em" alt="" class="src">
+          <img src="/assets/img/img/logo.png" height="125em" width="125em" alt="Robert Maja International Fine Art" class="src">
 
-        
         </h1>
       </a>
 
@@ -85,7 +73,7 @@
           <li><a href="projects.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav><!-- .navbar -->
+      </nav>
 
     </div>
   </header><!-- End Header -->
@@ -105,26 +93,26 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Our Projects Section ======= -->
+    <!-- ======= Gallery Section ======= -->
     <section id="projects" class="projects">
       <div class="container" data-aos="fade-up">
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
 
           <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" id="textx" class="filter-active">All</li>
-            <li data-filter=".filter-rooster" id="textx">Rooster</li>
-            <li data-filter=".filter-smoking" id="textx">Cigars</li>
-            <li data-filter=".filter-murals" id="textx">Murals</li>
-            <li data-filter=".filter-landscape" id="textx">Landscape</li>
-            <li data-filter=".filter-cubism" id="textx">Cubism</li>
-          </ul><!-- End Projects Filters -->
+            <li data-filter="*" class="filter-active textx-body">All</li>
+            <li class="textx-body" data-filter=".filter-rooster">Rooster</li>
+            <li class="textx-body" data-filter=".filter-smoking">Cigars</li>
+            <li class="textx-body" data-filter=".filter-murals">Murals</li>
+            <li class="textx-body" data-filter=".filter-landscape">Landscape</li>
+            <li class="textx-body" data-filter=".filter-cubism">Cubism</li>
+          </ul><!-- End Gallery Filters -->
 
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="/assets/img/img/43.jpg" class="img-fluid" alt="">
+                <img src="/assets/img/img/43.jpg" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Rooster</h4>
                   <p></p>
@@ -132,11 +120,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="/assets/img/img/52.jpg" class="img-fluid" alt="">
+                <img src="/assets/img/img/52.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -144,11 +132,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/39.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/39.jpg" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cubism</h4>
                   <p></p>
@@ -156,11 +144,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/50.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/50.jpg" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cubism</h4>
                   <p></p>
@@ -168,11 +156,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/sam.JPG" class="img-fluid" alt="">
+                <img src="assets/img/img/sam.JPG" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -180,11 +168,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/66.jpeg" class="img-fluid" alt="">
+                <img src="assets/img/img/66.jpeg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -192,11 +180,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/purvit.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/purvit.jpg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -204,11 +192,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/37.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/37.jpg" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Rooster</h4>
                   <p></p>
@@ -216,11 +204,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/53.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/53.jpg" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cubism</h4>
                   <p></p>
@@ -228,11 +216,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/51.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/51.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -240,11 +228,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/59.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/59.jpg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -252,11 +240,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/22.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/22.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -264,11 +252,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/68.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/68.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -276,11 +264,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/13.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/13.jpg" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Rooster</h4>
                   <p></p>
@@ -288,11 +276,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/64.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/64.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -300,11 +288,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/65.jpeg" class="img-fluid" alt="">
+                <img src="assets/img/img/65.jpeg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -312,11 +300,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/24.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/24.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -324,11 +312,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/17.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/17.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -336,11 +324,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/25.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/25.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -348,11 +336,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="/assets/img/img/3.jpg" class="img-fluid" alt="">
+                <img src="/assets/img/img/3.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -360,11 +348,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/6.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/6.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -372,11 +360,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/31.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/31.jpg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -384,11 +372,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/5.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/5.jpg" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Rooster</h4>
                   <p></p>
@@ -396,11 +384,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/21.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/21.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -408,11 +396,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/63.JPG" class="img-fluid" alt="">
+                <img src="assets/img/img/63.JPG" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -420,23 +408,23 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/57.JPG" class="img-fluid" alt="">
+                <img src="assets/img/img/57.JPG" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Rooster</h4>
                   <p></p>
-                  <a href="assets/img/img/57.jpg" title="Rooster" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/img/57.JPG" title="Rooster" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/44.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/44.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -444,11 +432,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/42.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/42.jpg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -456,11 +444,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-rooster">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/35.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/35.jpg" class="img-fluid" alt="Rooster by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Rooster</h4>
                   <p></p>
@@ -468,11 +456,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/45.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/45.jpg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -480,11 +468,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/23.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/23.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -492,11 +480,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/18.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/18.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -504,25 +492,23 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/poet.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/poet.jpg" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
-                  <h4>Cubism<h4>
+                  <h4>Cubism</h4>
                   <p></p>
                   <a href="assets/img/img/poet.jpg" title="Cubism" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
-
-            
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/40.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/40.jpg" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cubism</h4>
                   <p></p>
@@ -530,11 +516,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/4.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/4.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -542,11 +528,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/47.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/47.jpg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -554,11 +540,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/12.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/12.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -566,11 +552,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/14.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/14.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -578,12 +564,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
-
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/46.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/46.jpg" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -591,11 +576,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/58.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/58.jpg" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -603,11 +588,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/32.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/32.jpg" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cubism</h4>
                   <p></p>
@@ -615,11 +600,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-murals">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/62.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/62.jpg" class="img-fluid" alt="Murals by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Murals</h4>
                   <p></p>
@@ -627,12 +612,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
-            
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/lands1.png" class="img-fluid" alt="">
+                <img src="assets/img/img/lands1.png" class="img-fluid" alt="Landscape by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Landscape</h4>
                   <p></p>
@@ -640,11 +624,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->       
+            </div><!-- End Gallery Item -->       
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/DR-Market.JPG" class="img-fluid" alt="">
+                <img src="assets/img/img/DR-Market.JPG" class="img-fluid" alt="Market by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Market</h4>
                   <p></p>
@@ -652,11 +636,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/gallery.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/gallery.jpg" class="img-fluid" alt="Gallery by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Gallery</h4>
                   <p></p>
@@ -664,11 +648,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-landscape">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/gallery2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/gallery2.jpg" class="img-fluid" alt="Gallery by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Gallery</h4>
                   <p></p>
@@ -676,11 +660,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-smoking">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/Puro-chulo.JPG" class="img-fluid" alt="">
+                <img src="assets/img/img/Puro-chulo.JPG" class="img-fluid" alt="Cigars by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cigars</h4>
                   <p></p>
@@ -688,11 +672,11 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-cubism">
               <div class="portfolio-content h-100">
-                <img src="assets/img/img/54.jpg" class="img-fluid" alt="">
+                <img src="assets/img/img/54.jpg" class="img-fluid" alt="Cubism by Robert Maja">
                 <div class="portfolio-info">
                   <h4>Cubism</h4>
                   <p></p>
@@ -700,16 +684,14 @@
                   <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div><!-- End Gallery Item -->
 
-
-
-          </div><!-- End Projects Container -->
+          </div><!-- End Gallery Container -->
 
         </div>
 
       </div>
-    </section><!-- End Our Projects Section -->
+    </section><!-- End Gallery Section -->
 
   </main><!-- End #main -->
 
@@ -723,23 +705,20 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h1>
-                <img src="/assets/img/img/logo.png" height="45%" width="50%" alt="" class="src">
+                <img src="/assets/img/img/logo.png" height="45%" width="50%" alt="Robert Maja International Fine Art" class="src">
                 <span></span>
               
               </h1>
               
               <p>
                 Los Angeles California <br>
-                <!--NY 535022, USA<br><br>-->
+                
                 <strong>Phone:</strong> +1 (805) 540-4434<br>
                  <strong>Email:</strong> robertmaja71@gmail.com<br>
               </p>
 
               <div class="social-links d-flex mt-3">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/robertmajaofficial/" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div><!-- End footer info column-->
@@ -750,8 +729,6 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="/about.html">About us</a></li>
               <li><a href="/services.html">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
             </ul>
           </div><!-- End footer links column-->
 
@@ -765,8 +742,6 @@
             </ul>
           </div><!-- End footer links column-->
 
-         
-
         </div>
       </div>
     </div>
@@ -777,10 +752,7 @@
           &copy; Copyright <strong><span>Robertmaja</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          
           Designed by <a href="https://www.instagram.com/roddev_/">RdeV</a>
         </div>
       </div>
